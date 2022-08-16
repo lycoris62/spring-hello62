@@ -1,11 +1,13 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.context.annotation.Primary;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
+@Primary
 public class JpaMemberRepository implements MemberRepository {
 
     private final EntityManager em;
