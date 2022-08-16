@@ -22,6 +22,7 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass()); // AOP로 프록시 클래스가 보임
     }
 
     @GetMapping("/members/new")
